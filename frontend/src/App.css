@@ -1,0 +1,160 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9; /* Light background */
+  color: #333333; /* Dark text for better readability */
+  font-size: 16px; /* Base font size */
+}
+
+.App {
+  text-align: center;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Logo */
+.App-logo {
+  height: 30vmin; /* More responsive size */
+  width: auto;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Responsive Logo Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header Section */
+.App-header {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter background with slight transparency */
+  padding: 4rem 2rem;
+  border-radius: 12px; /* Rounded corners for smooth visuals */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Dynamic header height */
+  max-width: 100%;
+  text-shadow: none; /* Removed text shadow for better clarity */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Interactive Link */
+.App-link {
+  color: #0066cc; /* Lighter blue */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, color 0.3s ease; /* Interactive transition */
+}
+
+.App-link:hover,
+.App-link:focus {
+  transform: scale(1.1);
+  color: #004d99; /* Slightly darker blue for hover */
+}
+
+/* Responsive Typography */
+.App-header h1 {
+  font-size: calc(18px + 4vmin); /* Dynamic header font size */
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.App-header p {
+  font-size: calc(14px + 1vmin);
+  line-height: 1.6;
+  max-width: 80%;
+  margin: 0 auto;
+  color: #555555; /* Darker text color for paragraphs */
+}
+
+/* Advanced Animations for Logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add CSS Variables for Easy Customization */
+:root {
+  --primary-color: #0066cc;
+  --bg-color: #f4f4f9;
+  --accent-color: #004d99;
+  --border-radius: 12px;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.App-link {
+  color: var(--primary-color);
+}
+
+.App-link:hover,
+.App-link:focus {
+  color: var(--accent-color);
+}
+
+/* Media Query for Smaller Devices */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 2rem;
+    min-height: 60vh;
+  }
+
+  .App-logo {
+    height: 25vmin;
+  }
+
+  .App-header h1 {
+    font-size: calc(16px + 5vmin);
+  }
+
+  .App-header p {
+    font-size: calc(12px + 2vmin);
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    padding: 1.5rem;
+    min-height: 50vh;
+  }
+
+  .App-logo {
+    height: 20vmin;
+  }
+
+  .App-header h1 {
+    font-size: calc(14px + 6vmin);
+  }
+
+  .App-header p {
+    font-size: calc(12px + 1.5vmin);
+  }
+}

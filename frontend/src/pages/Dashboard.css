@@ -1,0 +1,240 @@
+/* src/pages/Dashboard.css */
+
+/* Common Container Styles for both Dashboards */
+.dashboard-container {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f4f7fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Heading Styles for Dashboard */
+h3 {
+  color: #343a40;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Course Lists and Tables */
+.course-list, .course-container {
+  margin-top: 30px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #bbd13e;
+  color: #0c0b0b;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+tr:hover td {
+  background-color: #e9ecef;
+}
+
+/* Button Styles */
+button {
+  padding: 8px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Styling for Student Dashboard */
+.student-dashboard .course-list th, .student-dashboard .course-list td {
+  text-align: center;
+}
+
+/* Styling for Teacher Dashboard */
+.teacher-dashboard .course-container h3 {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Attendance Management */
+.attendance-btn {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.attendance-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Status of Attendance */
+.attendance-status {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.attendance-status.absent {
+  color: #dc3545;
+}
+
+/* Dashboard Section for Teacher */
+.teacher-dashboard {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.teacher-dashboard .course-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.teacher-dashboard table {
+  background-color: #f9f9f9;
+}
+
+.teacher-dashboard .course-container h3 {
+  color: #007bff;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+/* Center the entire dashboard */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Admin Dashboard styles (for Admin specific functionality) */
+.admin-dashboard {
+  padding: 30px;
+}
+
+.admin-dashboard h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.admin-dashboard-actions {
+  margin-bottom: 40px;
+}
+
+.admin-dashboard-actions h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #130707;
+}
+
+.admin-dashboard-actions button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-dashboard-actions button:hover {
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+td button:hover {
+  background-color: #c82333;
+}
+
+/* Optional: Style for the list of students and teachers (to make it visually clean) */
+.student-list,
+.teacher-list {
+  margin-top: 20px;
+}
+
+.student-list table,
+.teacher-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-list td,
+.teacher-list td {
+  padding: 10px;
+}
+
+.student-list th,
+.teacher-list th {
+  background-color: #f2f2f2;
+}

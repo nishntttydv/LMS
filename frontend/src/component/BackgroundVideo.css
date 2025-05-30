@@ -1,0 +1,19 @@
+/* src/components/BackgroundVideo.css */
+.background-video-container {
+  position: fixed; /* Make it fixed to the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures the video stays behind all other content */
+  overflow: hidden;
+}
+
+.background-video {
+  object-fit: cover; /* Ensure the video covers the entire screen */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,143 @@
+/* General Styling */
+.course-list {
+  position: relative;
+  padding: 50px;
+  background-color: #f8f9fa; /* Light background */
+  background-image: url('../assets/library.jpg'); /* Correct path to the image in public */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Parallax effect */
+  font-family: 'Arial', sans-serif;
+  color: rgb(7, 7, 7); /* Ensure text is readable */
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Add a dark gradient overlay */
+.course-list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay for text readability */
+  z-index: -1;
+}
+
+/* Container for all courses */
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-out; /* Animation for smoother entry */
+}
+
+* Course Card Styling */
+.course-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);/* White with 70% opacity */
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  padding: 20px;
+  width: 280px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+/* Hover effect for course cards */
+.course-card:hover {
+  transform: translateY(-10px) scale(1.05); /* Slightly lift and scale */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+}
+
+/* Course title */
+.course-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Smooth transition for title color */
+}
+
+/* Hover effect on title */
+.course-card:hover h3 {
+  color: #007bff; /* Change title color on hover */
+}
+
+/* Course description */
+.course-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect on description */
+.course-card:hover p {
+  color: #007bff; /* Change description color on hover */
+}
+
+/* Button Styling */
+.course-card a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.course-card a:hover {
+  background-color: #0056b3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* For larger screens (desktop), display 2 cards per row */
+@media (min-width: 1024px) {
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+}
+
+/* For smaller screens (tablet, mobile): Wrap into a single column */
+@media (max-width: 768px) {
+  .courses {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .course-card {
+    width: 250px;
+  }
+}
+
+/* Animation for fading in the entire course list */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

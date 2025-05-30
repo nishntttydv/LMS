@@ -1,0 +1,92 @@
+/* src/pages/AboutUs.css */
+.about-us-hero {
+    background-image: url('https://your-image-url.com'); /* Add a background image for hero section */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4);
+  }
+  
+  .about-us-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+    z-index: 1;
+  }
+  
+  .about-us-container {
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .about-us-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-out;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .about-us-description {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ddd;
+    animation: slideInRight 1.5s ease-out;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Add some smooth hover effects for the title */
+  .about-us-title:hover {
+    color: #28a745; /* Green hover effect */
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
